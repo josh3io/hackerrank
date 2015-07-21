@@ -109,13 +109,13 @@ node * lca(node * root, int v1,int v2)
 
 
 void
-print_insert_order(node * root) {
+print_inorder(node * root) {
     if (root->left != NULL) {
-        print_insert_order(root->left);
+        print_inorder(root->left);
     }
     printf("%d ",root->data);
     if (root->right != NULL) {
-        print_insert_order(root->right);
+        print_inorder(root->right);
     }
 }
 
@@ -139,7 +139,7 @@ int main() {
     int v1,v2;
     init(root);
 
-    print_insert_order(root);
+    print_inorder(root);
     printf("pick two nodes to find their LCA: ");
 
     scanf("%d",&v1);
